@@ -1,0 +1,47 @@
+li {
+    margin-left:-20px;
+}
+#userInfo {
+    border:1px solid black;
+    padding:10px;
+    position:fixed;
+    top:0;
+    right:0;
+    width:300px;
+    height:20px;
+}
+#scoreBox {
+    border:1px solid black;
+    display:/*inline-flex*/none;
+    position:fixed;
+    bottom:0px;
+    margin:2px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#rules {
+    border:1px solid black;
+    display:inline-block;
+    margin-top:2%;
+    width:250px;
+    float:right;
+    padding:4px;
+}
+#logOut {
+    bottom:0;
+    left:0;
+    position:fixed;
+    margin:10px;
+}
+.pScore {
+    width:100px;
+    height:30px;
+    margin:10px;
+    float:left;
+    background-color:red;
+    visibility:hidden;
+}

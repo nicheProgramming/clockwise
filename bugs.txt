@@ -1,0 +1,1 @@
+Single character invalid entries in the log in feild refresh theage with no alerts.
