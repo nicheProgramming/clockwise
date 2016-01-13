@@ -12,7 +12,6 @@ Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
     Set up score keeping serverside. 
     Make bot players.
-Add game chat.
 Add preferences page.
 Enforce actual emails/make sure they at least ACTUALLY have a domain.
 Make form fields delete/not save to start with for sensitive info. 
