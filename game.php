@@ -20,9 +20,9 @@
             <?php
                 //Sudo code:
                 //If query p1score != null, {
-                //  echo:p1name . p1score;
+                //  echo p1name . p1score;
                 //} else {
-                //  <script>hidePlayer(player1);</script>
+                //  echo "<script>hidePlayer(player1);</script>";
                 //}
                 }
                 }
