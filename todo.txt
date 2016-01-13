@@ -1,11 +1,12 @@
 Ordered most to least needed. 
 please detail errors and give a file and if possible a line range of the problem
 
-Check to see if reload() in JS can refresh PHP in divs.
+Make a div that pulls score from DB.
 Determine if individual elements can be refreshed on a certain basis.
 Fix login check errors.
 We need to know if DB connections close themselves out.
 Fix up [if not exists] parameter. 
+fix both fields filled blank page log in. 
 Make querygen & destroy functions. 
 Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
@@ -14,5 +15,6 @@ Build game functions in php.
 Add game chat.
 Add preferences page.
 Enforce actual emails/make sure they at least ACTUALLY have a domain.
+Make form fields delete/not save to start with for sensitive info. 
 Encrypt passwords.
 Check registering emails to see if they have already made an account.
