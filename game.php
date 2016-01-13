@@ -16,12 +16,43 @@
     </form>
     <!--Is it possible to refresh certain elements individually?-->
     <div id="scoreBox">
-        <div id="p1score" class="pScore"></div>
-        <div id="p2score" class="pScore"></div>
-        <div id="p3score" class="pScore"></div>
-        <div id="p4score" class="pScore"></div>
-        <div id="p5score" class="pScore"></div>
-        <div id="p6score" class="pScore"></div>
+        <div id="p1score" class="pScore">
+            <?php
+                //Sudo code:
+                //If query p1score != null, {
+                //  echo:p1name . p1score;
+                //} else {
+                //  <script>hidePlayer(player1);</script>
+                //}
+                }
+                }
+            ?>
+        </div>
+        <div id="p2score" class="pScore">
+            <?php
+                
+            ?>
+        </div>
+        <div id="p3score" class="pScore">
+            <?php
+                
+            ?>
+        </div>
+        <div id="p4score" class="pScore">
+            <?php
+                
+            ?>
+        </div>
+        <div id="p5score" class="pScore">
+            <?php
+                
+            ?>
+        </div>
+        <div id="p6score" class="pScore">
+            <?php
+                
+            ?>
+        </div>
     </div>
     <button onClick="home();">Home</button>
     <?php isLoggedIn(); makeTable();/*array_push($usersInGame, $_SESSION['userName']); echo implode(',', $usersInGame);*/ ?>
