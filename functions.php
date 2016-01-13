@@ -1,11 +1,15 @@
 <?php
-
-    $usersInGame = [];
-
-    $con = new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
     
-    if (mysqli_connect_errno($mysqli)) {
-        trigger_error('Database connection failed: '  . mysqli_connect_error(), E_USER_ERROR);
+    //Obsolete?
+    //$usersInGame = [];
+
+    $con = connect();
+    
+    function connect() {
+        new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
+        if (mysqli_connect_errno($mysqli)) {
+            trigger_error('Database connection failed: '  . mysqli_connect_error(), E_USER_ERROR);
+        }
     }
     
     function rollDice() {
@@ -16,7 +20,6 @@
         $die5 = rand(1,6);
         $roll = $die1 + $die2 + $die3 + $die4 + $die5;
         return $roll;
-        echo $roll;
     }
     
     function turn($player, $playerScore) {
@@ -57,22 +60,6 @@
         } else {
             $GLOBALS['uniqUsed'] = $uniqNum2;
         }
-            /*
-            ,
-            player2name VARCHAR(30),
-            player3name VARCHAR(30),
-            player4name VARCHAR(30),
-            player5name VARCHAR(30),
-            player6name VARCHAR(30)
-            ELSE '$uniqNum2'(
-            player1name varchar(30),
-            player2name varchar(30),
-            player3name varchar(30),
-            player4name varchar(30),
-            player5name varchar(30),
-            player6name varchar(30)
-            );*/
-        //addUserToGame($uniqNum1);
         $tableGen;
         //genPhp();
     }

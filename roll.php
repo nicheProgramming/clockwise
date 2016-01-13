@@ -1,5 +1,16 @@
-<?php 
-    require_once('functions.php');
+<!DOCTYPE html>
+<html>
     
-    rollDice();
+
+<head>
+    
+</head>
+<body>
+well this is working kind of
+</body>
+</html>
+<?php 
+    require('functions.php');
+    
+    echo rollDice();
 ?>

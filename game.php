@@ -11,7 +11,7 @@
     <!-- Obsolete.
     <button onClick="rollDice();"> Roll Dice </button>
     <div id="numbers">No dice have been rolled.</div>-->
-    <form action="rollDice()" method='post'>
+    <form action="roll.php" method='post'>
         <input type="submit" name="submit">
     </form>
     <!--Is it possible to refresh certain elements individually?-->
@@ -24,7 +24,7 @@
         <div id="p6score" class="pScore"></div>
     </div>
     <button onClick="home();">Home</button>
-    <?php require('functions.php'); isLoggedIn(); makeTable();/*array_push($usersInGame, $_SESSION['userName']); echo implode(',', $usersInGame);*/ ?>
+    <?php isLoggedIn(); makeTable();/*array_push($usersInGame, $_SESSION['userName']); echo implode(',', $usersInGame);*/ ?>
     <div id="rules">
         Clockwise is a game of chance.
         <ul>
