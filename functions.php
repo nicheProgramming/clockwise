@@ -45,8 +45,8 @@
     }
     
     function makeTable() { 
-        $uniqNum1 = uniqid();
-        $uniqNum2 = uniqid();
+        $uniqNum1 = "gamedb_" . uniqid();
+        $uniqNum2 = "gamedb_" . uniqid();
         $con = $GLOBALS['con'];
         //The line below is confirmed to work. 
         //$tableGen = mysqli_query($con,"CREATE TABLE apple(name varchar(20))");
@@ -85,6 +85,7 @@
         header("Location: ". $fName);
     }
     
+    //Obsolete?
     function addUserToGame($tableName) {
         $con = $GLOBALS['con'];
         $con;

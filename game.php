@@ -14,6 +14,7 @@
     <form action="rollDice()" method='post'>
         <input type="submit" name="submit">
     </form>
+    <!--Is it possible to refresh certain elements individually?-->
     <div id="scoreBox">
         <div id="p1score" class="pScore"></div>
         <div id="p2score" class="pScore"></div>

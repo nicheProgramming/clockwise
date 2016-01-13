@@ -1,7 +1,7 @@
-Titty
 Ordered most to least needed. 
 please detail errors and give a file and if possible a line range of the problem
 
+Determine if individual elements can be refreshed on a certain basis.
 Fix login check errors.
 We need to know if DB connections close themselves out.
 Fix up [if not exists] parameter. 
