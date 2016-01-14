@@ -1,6 +1,10 @@
 Ordered most to least needed. 
 please detail errors and give a file and if possible a line range of the problem
 
+
+
+
+
 why is git diff blank?
 can we use enum values for user varification?
 set html elements displaying vars to inline-flex.
