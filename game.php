@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require('overlay.php');?>
-    <?php require('functions.php');?>
+    <?php 
+        require('overlay.php');
+        require('functions.php');
+    ?>
     <link rel="stylesheet" type="text/css" href="test.css">
     <script src="test.js"></script>
 </head>
 
 <body>
-    <!-- Obsolete.
-    <button onClick="rollDice();"> Roll Dice </button>
-    <div id="numbers">No dice have been rolled.</div>-->
     <form action="roll.php" method='post'>
         <input type="submit" name="submit">
     </form>
@@ -24,8 +23,6 @@
                 //} else {
                 //  echo "<script>hidePlayer(player1);</script>";
                 //}
-                }
-                }
             ?>
         </div>
         <div id="p2score" class="pScore">

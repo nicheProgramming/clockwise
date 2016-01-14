@@ -1,10 +1,3 @@
-/*var p1score = 3;
-var p2score = 3;
-var p3score = 3;
-var p4score = 3;
-var p5score = 3;
-var p6score = 3;*/
-
 function valSign() {
     var x = document.forms["signUp"]["userName"].value;
     var y = document.forms["signUp"]["password"].value;
