@@ -12,31 +12,6 @@
     //$con = connect();
     $con = new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
     
-    function rollDice() {
-        $die1 = rand(1,6);
-        $die2 = rand(1,6);
-        $die3 = rand(1,6);
-        $die4 = rand(1,6);
-        $die5 = rand(1,6);
-        $roll = $die1 + $die2 + $die3 + $die4 + $die5;
-        return $roll;
-    }
-    
-    function turn($player, $playerScore) {
-        $roll = rollDice();
-        $mod = $roll % 2;
-        
-        if($roll >= 20 && $mod == 0) {
-    		$playerScore--;
-    	} else if($roll >= 20 && $mod != 0) {
-    		$playerScore++;
-    	} else if($roll <= 19 && $mod == 0) {
-    		$playerScore++;
-    	} else if($roll <= 19 && $mod != 0) {
-    		$playerScore--;
-    	}
-        echo $player . " rolled " . $roll . ", changing his score to " . $playerScore . ".";
-    }
     
     function isLoggedIn() {
         if($_SESSION == null && $_SERVER['PHP_SELF'] != '/index.php') {
@@ -49,6 +24,7 @@
         }
     }
     
+    //What is this here for?
     function testTable() {
         $con = $GLOBALS['con'];
         $conTest = mysqli_query($con, "SELECT ");
@@ -64,11 +40,17 @@
         //This should also initialize score, and maybe store player UNs.
         $tableGen = mysqli_query($con,"CREATE TABLE ".$uniqNum1."(
             player1name VARCHAR(30),
+            player1score INT,
             player2name VARCHAR(30),
+            player2score INT,
             player3name VARCHAR(30),
+            player3score INT,
             player4name VARCHAR(30),
+            player4score INT,
             player5name VARCHAR(30),
-            player6name VARCHAR(30))");
+            player5score INT,
+            player6name VARCHAR(30),
+            player6score INT)");
         $uniqUsedCheck = mysqli_query($con, "SELECT * FROM ".$uniqNum1);
         if ($uniqUsedCheck != true) {
             $GLOBALS['uniqUsed'] = $uniqNum1;
