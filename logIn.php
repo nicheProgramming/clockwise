@@ -23,8 +23,8 @@
         //sleep is running, the echoes are not working.
         echo "<script type='text/javascript'>document.getElementById('logIn').display = 'none';</script>";
         echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        sleep(10);
-        header("Location: index.php"); 
+        // sleep(10);
+        //header("Location: index.php"); 
     }
    //if the email does not exist
     else if(count($row) <= 1){
