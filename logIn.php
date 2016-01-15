@@ -12,9 +12,6 @@
     $row = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM userInfo WHERE email='$email'"));
     // $row = mysqli_fetch_array($res);
     $username = $row['userName'];
-    /*if(count($row) <= 1){
-        echo ("row is good");
-    }*/
     if($row['password']==($password))
     {
         startSession();
@@ -26,13 +23,13 @@
         //sleep is running, the echoes are not working.
         echo "<script type='text/javascript'>document.getElementById('logIn').display = 'none';</script>";
         echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        sleep(3);
+        sleep(10);
         header("Location: index.php"); 
     }
    //if the email does not exist
     else if(count($row) <= 1){
         echo "<html><head><script type='text/javascript'>alert('Your login info is incorrect.')</script></head></html>";
-        sleep(3);
+        sleep(10);
         header("Location: index.php"); 
     }
 ?>

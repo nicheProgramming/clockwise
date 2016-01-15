@@ -23,6 +23,8 @@
                 //} else {
                 //  echo "<script>hidePlayer(player1);</script>";
                 //}
+                
+                
             ?>
         </div>
         <div id="p2score" class="pScore">
