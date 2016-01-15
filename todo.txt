@@ -1,28 +1,24 @@
 Ordered most to least needed. 
-please detail errors and give a file and if possible a line range of the problem
-
-
+Commented entries are NOT TO BE WORKED ON until uncommented entries are COMPLETE and FUNCTIONAL.
 
 
 
 why is git diff blank?
 can we use enum values for user varification?
-set html elements displaying vars to inline-flex.
+//set html elements displaying vars to inline-flex.
 Make a div that pulls score from DB.
 Determine if individual elements can be refreshed on a certain basis.
-Fix login check errors.
-We need to know if DB connections close themselves out.
-Fix up [if not exists] parameter. 
-fix both fields filled blank page log in. 
+//Fix login check errors.
+//Fix up [if not exists] parameter. 
 Make querygen & destroy functions. 
 Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
     Set up score keeping serverside. 
     Make bot players.
-Shorten URLS for share function.
-Add preferences page.
-Enforce actual emails/make sure they at least ACTUALLY have a domain.
-Make form fields delete/not save to start with for sensitive info. 
-Encrypt passwords.
-Check registering emails to see if they have already made an account.
+//Shorten URLS for share function.
+//Add preferences page.
+//Enforce actual emails/make sure they at least ACTUALLY have a domain.
+//Make form fields delete/not save to start with for sensitive info. 
+//Encrypt passwords.
+//Check registering emails to see if they have already made an account.
 Use to set up game deletion: http://stackoverflow.com/questions/1589278/sql-deleting-tables-with-prefix .

@@ -1,1 +1,3 @@
-Single character invalid entries in the log in feild refresh theage with no alerts.
+Please detail errors and give a file and if possible a line range of the problem
+
+Invalid logins redirect to index w/o giving error, invalid login. [line range n/a}
