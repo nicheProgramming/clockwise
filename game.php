@@ -4,6 +4,7 @@
     <?php 
         require('overlay.php');
         require('functions.php');
+        $con = $GLOBALS['con'];
     ?>
     <link rel="stylesheet" type="text/css" href="test.css">
     <script src="test.js"></script>
@@ -22,7 +23,7 @@
                 //} else {
                 //  echo "<script>hidePlayer(player1);</script>";
                 //}
-                
+                $p1score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
                 
             ?>
         </div>

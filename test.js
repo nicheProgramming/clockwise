@@ -29,8 +29,20 @@ function home() {
 	window.location = "main.php";
 }
 
-function reload($div){
-        var container = document.getElementById($div);
-        var content = container.innerHTML;
-        container.innerHTML= content;
+//Should refresh a div. 
+function reload(div){
+    //hidePlayer();
+    var container = document.getElementById(div);
+    var content = container.innerHTML;
+    container.innerHTML= content;
+}
+
+function hidePlayer() {
+    //Should run a for loop to check each player's score. 
+    //If it's 0 or below, hide the score box. 
+    for(i=0;1<7;i++) {
+        
+        document.getElementById("p" + i + "score").style.display = 'none';
+    
+    }
 }

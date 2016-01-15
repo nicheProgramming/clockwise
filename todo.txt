@@ -2,14 +2,14 @@ Ordered most to least needed.
 Commented entries are NOT TO BE WORKED ON until uncommented entries are COMPLETE and FUNCTIONAL.
 
 
-
+Tell php to set each pScore box's value = their score.
+Tell JS to check those values to decide if a pScore box should be displayed.
 Add dice blocks and total dice score to game.php
 //set html elements displaying vars to inline-flex.
 Make a div that pulls score from DB.
 Determine if individual elements can be refreshed on a certain basis.
 //Fix login check errors.
 //Fix up [if not exists] parameter. 
-Make querygen & destroy functions. 
 Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
     Set up score keeping serverside. 

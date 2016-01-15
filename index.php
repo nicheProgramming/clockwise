@@ -8,7 +8,6 @@
 <body>
     <?php
     require 'functions.php';
-    session_start();
     isLoggedIn();
     ?>
     <div id="signUp">
