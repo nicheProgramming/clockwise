@@ -54,7 +54,7 @@
         </div>
     </div>
     <button onClick="home();">Home</button>
-    <?php isLoggedIn(); makeTable();/*array_push($usersInGame, $_SESSION['userName']); echo implode(',', $usersInGame);*/ ?>
+    <?php isLoggedIn(); /*makeTable();array_push($usersInGame, $_SESSION['userName']); echo implode(',', $usersInGame);*/ ?>
     <div id="rules">
         Clockwise is a game of chance.
         <ul>

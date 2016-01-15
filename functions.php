@@ -2,10 +2,13 @@
 
     $usersInGame = [];
 
-    $con = new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
+    $con = connect();
     
-    if (mysqli_connect_errno($mysqli)) {
-        trigger_error('Database connection failed: '  . mysqli_connect_error(), E_USER_ERROR);
+    function connect() {
+        new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
+        if (mysqli_connect_errno($mysqli)) {
+            trigger_error('Database connection failed: '  . mysqli_connect_error(), E_USER_ERROR);
+        } 
     }
     
     function rollDice() {
@@ -43,26 +46,35 @@
         }
     }
     
+    function testTable() {
+        $con = $GLOBALS['con'];
+        $conTest = mysqli_query($con, "SELECT ");
+    }
+    
     function makeTable() { 
         $uniqNum1 = "gamedb_" . uniqid();
         $uniqNum2 = "gamedb_" . uniqid();
         $con = $GLOBALS['con'];
         //The line below is confirmed to work. 
         //$tableGen = mysqli_query($con,"CREATE TABLE apple(name varchar(20))");
-        $tableGen = mysqli_query($con,"CREATE TABLE ".$uniqNum1."(player1name varchar(20))");
+        
+        //This should also initialize score, and maybe store player UNs.
+        $tableGen = mysqli_query($con,"CREATE TABLE ".$uniqNum1."(
+            player1name varchar(20),
+            player2name VARCHAR(30),
+            player3name VARCHAR(30),
+            player4name VARCHAR(30),
+            player5name VARCHAR(30),
+            player6name VARCHAR(30))");
         $uniqUsedCheck = mysqli_query($con, "SELECT * FROM ".$uniqNum1);
         if ($uniqUsedCheck != true) {
             $GLOBALS['uniqUsed'] = $uniqNum1;
         } else {
             $GLOBALS['uniqUsed'] = $uniqNum2;
         }
+            //We need to implement a version of this into out gen Query
+            //To fix conercase name conflict. 
             /*
-            ,
-            player2name VARCHAR(30),
-            player3name VARCHAR(30),
-            player4name VARCHAR(30),
-            player5name VARCHAR(30),
-            player6name VARCHAR(30)
             ELSE '$uniqNum2'(
             player1name varchar(30),
             player2name varchar(30),
