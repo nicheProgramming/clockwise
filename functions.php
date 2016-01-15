@@ -12,6 +12,9 @@
     //$con = connect();
     $con = new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
     
+    function startSession() {
+        session_start();
+    }
     
     function isLoggedIn() {
         if($_SESSION == null && $_SERVER['PHP_SELF'] != '/index.php') {
@@ -84,12 +87,14 @@
     //Obsolete?
     function addUserToGame($tableName) {
         $con = $GLOBALS['con'];
-        $con;
-        $retrieve = mysqli("SELECT * FROM '$tableName'");
-        echo $retrieve;
+        
     }
     
-    function startSession() {
-        session_start();
+    function joinGame() {
+        $con = $GLOBALS['con'];
+        $numPlayersInGame = mysqli_query($con, "SELECT * FROM testGame WHERE playersInGame > 0;");
+        
+        return $numPlayersInGame;
     }
+    
 ?>
