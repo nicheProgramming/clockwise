@@ -1,21 +1,13 @@
 <?php
 
-    $usersInGame = [];
-
-    function connect() {
-        new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
-        if (mysqli_connect_errno($mysqli)) {
-            trigger_error('Database connection failed: '  . mysqli_connect_error(), E_USER_ERROR);
-        } 
-    }
-
-    //$con = connect();
     $con = new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
     
+    //Starts a php session for the user. To be called when logging in. 
     function startSession() {
         session_start();
     }
     
+    //Called once per page to ensure user is logged in.
     function isLoggedIn() {
         if($_SESSION == null && $_SERVER['PHP_SELF'] != '/index.php') {
             //echo "<script>alert('session = null')</script>";
@@ -33,9 +25,10 @@
         $conTest = mysqli_query($con, "SELECT ");
     }
     
+    //To be called when a game is made.
     function makeTable() { 
-        $uniqNum1 = "gamedb_" . uniqid();
-        $uniqNum2 = "gamedb_" . uniqid();
+        $uniqNum1 = "game_" . uniqid();
+        $uniqNum2 = "game_" . uniqid();
         $con = $GLOBALS['con'];
         //The line below is confirmed to work. 
         //$tableGen = mysqli_query($con,"CREATE TABLE apple(name varchar(20))");
@@ -76,6 +69,7 @@
         //genPhp();
     }
     
+    //Makes game page for game instance.
     function genPHP() {
         $fName = $GLOBALS['usedUniq'] + '.php';
         $fh = fopen($fName,'w');
@@ -84,16 +78,19 @@
         header("Location: ". $fName);
     }
     
-    //Obsolete?
-    function addUserToGame($tableName) {
+    //Destroys generated files after game session is over. 
+    function gameDestory() {
         $con = $GLOBALS['con'];
-        
+        $table = $GLOBALS['usedUniq'];
+        $dropTable = mysqli_query($con, "DROP TABLE " . $table . ";");
+        $deleteFile = unlink($table . '.php');
+        header("Location: main.php");
     }
     
+    //To be called when an unjoined player joins a game. 
     function joinGame() {
         $con = $GLOBALS['con'];
         $numPlayersInGame = mysqli_query($con, "SELECT * FROM testGame WHERE playersInGame > 0;");
-        
         return $numPlayersInGame;
     }
     

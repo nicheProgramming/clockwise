@@ -11,6 +11,7 @@
         return $roll;
     }
     
+    
     function turn($player, $playerScore) {
         $roll = rollDice();
         $mod = $roll % 2;
@@ -24,6 +25,7 @@
     	} else if($roll <= 19 && $mod != 0) {
     		$playerScore--;
     	}
+    	//This line needs to be called ON THE GAME PAGE AFTER EVERY TURN.
         echo $player . " rolled " . $roll . ", changing his score to " . $playerScore . ".";
     }
 ?>
