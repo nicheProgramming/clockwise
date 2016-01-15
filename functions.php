@@ -2,14 +2,15 @@
 
     $usersInGame = [];
 
-    $con = connect();
-    
     function connect() {
         new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
         if (mysqli_connect_errno($mysqli)) {
             trigger_error('Database connection failed: '  . mysqli_connect_error(), E_USER_ERROR);
         } 
     }
+
+    //$con = connect();
+    $con = new mysqli(getenv('IP'), getenv('C9_USER'), "", "test", 3306);
     
     function rollDice() {
         $die1 = rand(1,6);
@@ -39,10 +40,12 @@
     
     function isLoggedIn() {
         if($_SESSION == null && $_SERVER['PHP_SELF'] != '/index.php') {
-            echo "<script>alert('session = null')</script>";
+            //echo "<script>alert('session = null')</script>";
             header("Location: index.php");
         } else if($_SESSION != null && $_SERVER['PHP_SELF'] == '/index.php') {
             header("Location: main.php");
+        } else if($_SESSION != null && $_SERVER['PHP_SELF'] != '/index.php') {
+            return;
         }
     }
     
@@ -60,7 +63,7 @@
         
         //This should also initialize score, and maybe store player UNs.
         $tableGen = mysqli_query($con,"CREATE TABLE ".$uniqNum1."(
-            player1name varchar(20),
+            player1name VARCHAR(30),
             player2name VARCHAR(30),
             player3name VARCHAR(30),
             player4name VARCHAR(30),

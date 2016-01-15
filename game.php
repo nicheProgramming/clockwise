@@ -10,10 +10,9 @@
 </head>
 
 <body>
-    <form action="roll.php" method='post'>
-        <input type="submit" name="submit">
-    </form>
-    <!--Is it possible to refresh certain elements individually?-->
+    <!--<form action="roll.php" method='post'>-->
+    <!--    <input type="submit" name="submit">-->
+    <!--</form>-->
     <div id="scoreBox">
         <div id="p1score" class="pScore">
             <?php
@@ -53,6 +52,7 @@
             ?>
         </div>
     </div>
+    <button onClick="reload(scoreBox)">Refresh Score</button> <br>
     <button onClick="home();">Home</button>
     <?php isLoggedIn(); /*makeTable();array_push($usersInGame, $_SESSION['userName']); echo implode(',', $usersInGame);*/ ?>
     <div id="rules">

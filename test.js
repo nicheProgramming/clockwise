@@ -29,8 +29,8 @@ function home() {
 	window.location = "main.php";
 }
 
-function reload(){
-        var container = document.getElementById("yourDiv");
+function reload($div){
+        var container = document.getElementById($div);
         var content = container.innerHTML;
         container.innerHTML= content;
 }

@@ -12,7 +12,7 @@ li {
 }
 #scoreBox {
     border:1px solid black;
-    display:/*inline-flex*/none;
+    display:inline-flex;
     position:fixed;
     bottom:0px;
     margin:2px;

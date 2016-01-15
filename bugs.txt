@@ -1,3 +1,5 @@
 Please detail errors and give a file and if possible a line range of the problem
 
 Invalid logins redirect to index w/o giving error, invalid login. [line range n/a}
+Refreshing on game.php redirects to main.php.
+When $con [functions.php line 12] = connect(), loggging in is not functional.
