@@ -15,6 +15,29 @@
 
 <body>
     
+    <button onClick="reload(scoreBox)">Refresh Score</button>
+    
+    <button onClick="home();">Home</button>
+
+    <?php 
+    isLoggedIn(); 
+    /*makeTable();
+    array_push($usersInGame, $_SESSION['userName']); 
+    echo implode(',', $usersInGame);*/ 
+    ?>
+    <div id="rules">
+        Clockwise is a game of chance.
+        <ul>
+            <li>You need at least two players, and no more than six.</li>
+            <li>The oldest player goes first.</li>
+            <li>Each player starts off with three points.</li>
+            <li>Get seven points to win.</li>
+            <li>If you hit zero points, you lose.</li>
+            <li>If you roll 20 or more, odd numbers will give you a point and even numbers will lose you a point.</li>
+            <li>If you roll less than 20, even numbers will give you points odd numbers subtract points.</li>
+        </ul>
+    </div>
+    
     <div id="scoreBox">
         <div id="p1score" class="pScore">
             <?php
@@ -48,39 +71,16 @@
         </div>
         <div id="p5score" class="pScore">
             <?php
-                $p5score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                // echo $p5score;
+                $p5score = mysqli_query($con, "SELECT player1score FROM testGame WHERE player1score > 0;");
+                echo $p5score;
             ?>
         </div>
         <div id="p6score" class="pScore">
             <?php
                 $p6score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                // echo $p6score;
+                //echo $p6score;
             ?>
         </div>
-    </div>
-    
-    <button onClick="reload(scoreBox)">Refresh Score</button>
-    
-    <button onClick="home();">Home</button>
-    
-    <?php 
-    isLoggedIn(); 
-    /*makeTable();
-    array_push($usersInGame, $_SESSION['userName']); 
-    echo implode(',', $usersInGame);*/ 
-    ?>
-    <div id="rules">
-        Clockwise is a game of chance.
-        <ul>
-            <li>You need at least two players, and no more than six.</li>
-            <li>The oldest player goes first.</li>
-            <li>Each player starts off with three points.</li>
-            <li>Get seven points to win.</li>
-            <li>If you hit zero points, you lose.</li>
-            <li>If you roll 20 or more, odd numbers will give you a point and even numbers will lose you a point.</li>
-            <li>If you roll less than 20, even numbers will give you points odd numbers subtract points.</li>
-        </ul>
     </div>
 </body>
 </html>
