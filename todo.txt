@@ -2,6 +2,7 @@ Ordered most to least needed.
 Commented entries are NOT TO BE WORKED ON until uncommented entries are COMPLETE and FUNCTIONAL.
 
 
+//Set overlay box(es) to inline-flex and get Inline flex working.
 Tell php to set each pScore box's value = their score.
 Tell JS to check those values to decide if a pScore box should be displayed.
 Add dice blocks and total dice score to game.php

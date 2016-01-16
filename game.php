@@ -8,15 +8,13 @@
     ?>
     <link rel="stylesheet" type="text/css" href="test.css">
     <script src="test.js">
-        var runner = setInterval(reloadF('scoreBox'),1000);
-        runner;
+        // var runner = setInterval(reloadF('scoreBox'),1000);
+        // runner;
     </script>
 </head>
 
 <body>
-    <!--<form action="roll.php" method='post'>-->
-    <!--    <input type="submit" name="submit">-->
-    <!--</form>-->
+    
     <div id="scoreBox">
         <div id="p1score" class="pScore">
             <?php
@@ -27,38 +25,51 @@
                 //  echo "<script>hidePlayer(player1);</script>";
                 //}
                 $p1score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                
+                // echo $p1score;
             ?>
         </div>
         <div id="p2score" class="pScore">
             <?php
-                
+                $p2score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+                // echo $p2score;
             ?>
         </div>
         <div id="p3score" class="pScore">
             <?php
-                
+                $p3score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+                // echo $p3score;
             ?>
         </div>
         <div id="p4score" class="pScore">
             <?php
-                
+                $p4score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+                // echo $p4score;
             ?>
         </div>
         <div id="p5score" class="pScore">
             <?php
-                
+                $p5score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+                // echo $p5score;
             ?>
         </div>
         <div id="p6score" class="pScore">
             <?php
-                
+                $p6score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+                // echo $p6score;
             ?>
         </div>
     </div>
-    <button onClick="reload(scoreBox)">Refresh Score</button> <br>
+    
+    <button onClick="reload(scoreBox)">Refresh Score</button>
+    
     <button onClick="home();">Home</button>
-    <?php isLoggedIn(); /*makeTable();array_push($usersInGame, $_SESSION['userName']); echo implode(',', $usersInGame);*/ ?>
+    
+    <?php 
+    isLoggedIn(); 
+    /*makeTable();
+    array_push($usersInGame, $_SESSION['userName']); 
+    echo implode(',', $usersInGame);*/ 
+    ?>
     <div id="rules">
         Clockwise is a game of chance.
         <ul>
