@@ -30,8 +30,9 @@ function home() {
 }
 
 //Should refresh a div. 
-function reload(div){
+function reloadF(div){
     //hidePlayer();
+    
     var container = document.getElementById(div);
     var content = container.innerHTML;
     container.innerHTML= content;

@@ -7,7 +7,10 @@
         $con = $GLOBALS['con'];
     ?>
     <link rel="stylesheet" type="text/css" href="test.css">
-    <script src="test.js"></script>
+    <script src="test.js">
+        var runner = setInterval(reloadF('scoreBox'),1000);
+        runner;
+    </script>
 </head>
 
 <body>
