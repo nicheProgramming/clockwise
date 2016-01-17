@@ -24,7 +24,6 @@
     /*makeTable();
     array_push($usersInGame, $_SESSION['userName']); 
     echo implode(',', $usersInGame);*/ 
-    
     ?>
     <div id="rules">
         Clockwise is a game of chance.
@@ -48,19 +47,19 @@
                 //} else {
                 //  echo "<script>hidePlayer(player1);</script>";
                 //}
-                $p1name = mysqli_fetch_array(mysqli_query($con, "SELECT p1name FROM testGame"));
-                $sha = mysqli_query($con, "SELECT p1score FROM testGame");
-                $p1score = mysqli_fetch_assoc($sha);
-                //I believe p1score is broken due to the row issue.
-                $p1score += 1;
-                echo $p1name[0] . ": " . $p1score['p1name'];
+                $p1 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 1"));
+                $pName1 = $p1['pName'];
+                $pScore1 = $p1['pScore'];
+                echo $pName1 .": ". $pScore1;
             ?>
         </div>
         <div id="p2score" class="pScore">
             <?php
-            //     $p2score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-            //     // echo $p2score;
-            // ?>
+                $p2 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 2"));
+                $pName2 = $p2['pName'];
+                $pScore2 = $p2['pScore'];
+                echo $pName2 .": ". $pScore2;
+            ?>
         </div>
         <div id="p3score" class="pScore">
             <?php
