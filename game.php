@@ -41,16 +41,14 @@
     <div id="scoreBox">
         <div id="p1score" class="pScore">
             <?php
-                //Sudo code:
-                //If query p1score != null, {
-                //  echo p1name . p1score;
-                //} else {
-                //  echo "<script>hidePlayer(player1);</script>";
-                //}
                 $p1 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 1"));
                 $pName1 = $p1['pName'];
                 $pScore1 = $p1['pScore'];
-                echo $pName1 .": ". $pScore1;
+                if($pName1 == '') {
+                    echo "No player";
+                } else {
+                    echo $pName1 .": ". $pScore1;
+                }
             ?>
         </div>
         <div id="p2score" class="pScore">
@@ -58,7 +56,11 @@
                 $p2 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 2"));
                 $pName2 = $p2['pName'];
                 $pScore2 = $p2['pScore'];
-                echo $pName2 .": ". $pScore2;
+                if($pName2 == '') {
+                    echo "No player";
+                } else {
+                    echo $pName2 .": ". $pScore2;
+                }
             ?>
         </div>
         <div id="p3score" class="pScore">
