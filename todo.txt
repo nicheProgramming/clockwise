@@ -2,18 +2,17 @@ Ordered most to least needed.
 Commented entries are NOT TO BE WORKED ON until uncommented entries are COMPLETE and FUNCTIONAL.
 
 
-//Set overlay box(es) to inline-flex and get Inline flex working.
 Would it be better to export game info to a txt file?
-//Set user log in sessions to expire after 12-24 hours.
+Use to set up game deletion: http://stackoverflow.com/questions/1589278/sql-deleting-tables-with-prefix .
+Learn how to stop a database from accepting more then x many entries max.
 Tell php to set each pScore box's value = their score.
-Tell JS to check those values to decide if a pScore box should be displayed.
 Add dice blocks and total dice score to game.php
-//set html elements displaying vars to inline-flex.
-Determine if individual elements can be refreshed on a certain basis.
-//Fix login check errors.
-//Fix up [if not exists] parameter. 
 Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
+//set html elements displaying vars to inline-flex.
+//Fix login check errors.
+//Fix up [if not exists] parameter. 
+//Set overlay box(es) to inline-flex and get Inline flex working.
 //Make bot players.
 //Shorten URLS for share function.
 //Add preferences page.
@@ -23,5 +22,4 @@ Build game functions in php.
 //Check registering emails to see if they have already made an account.
 //Make a bug reporting feature.
 //Rework game destroy to send game over files to another folder temporarily, in case the game needs to be revived. The folder should be cleared once a day.
-Use to set up game deletion: http://stackoverflow.com/questions/1589278/sql-deleting-tables-with-prefix .
-Learn how to stop a database from accepting more then x many entries max.
+//Set user log in sessions to expire after 12-24 hours.
