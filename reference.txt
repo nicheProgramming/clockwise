@@ -1,0 +1,7 @@
+MySQL
+    describe (table name) || (DB name); Gives info about table or DB
+    MAKE TABLE tableName(param1 DATATYPE(0), param2 DATATYPE(0)); Makes table.
+    LIST TABLES; Displays all tables in current DB.
+    USE dbname; Sets dbname as active DB.
+    INSET INTO tableName (column) VALUES (val); Adds info to table
+    ALTER TABLE tableName ADD columnName datatype; Apends to existing table.
