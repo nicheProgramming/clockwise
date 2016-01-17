@@ -25,4 +25,3 @@ Build game functions in php.
 //Rework game destroy to send game over files to another folder temporarily, in case the game needs to be revived. The folder should be cleared once a day.
 Use to set up game deletion: http://stackoverflow.com/questions/1589278/sql-deleting-tables-with-prefix .
 Learn how to stop a database from accepting more then x many entries max.
-Make absent player's score boxes dissapear.

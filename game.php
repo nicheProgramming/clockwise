@@ -45,7 +45,7 @@
                 $pName1 = $p1['pName'];
                 $pScore1 = $p1['pScore'];
                 if($pName1 == '') {
-                    echo "No player";
+                    echo "<style>#p1score {display:none;} </style>";
                 } else {
                     echo $pName1 .": ". $pScore1;
                 }
@@ -57,7 +57,7 @@
                 $pName2 = $p2['pName'];
                 $pScore2 = $p2['pScore'];
                 if($pName2 == '') {
-                    echo "No player";
+                    echo "<style>#p2score {display:none;} </style>";
                 } else {
                     echo $pName2 .": ". $pScore2;
                 }
@@ -69,7 +69,7 @@
                 $pName3 = $p3['pName'];
                 $pScore3 = $p3['pScore'];
                 if($pName3 == '') {
-                    echo "No player";
+                    echo "<style>#p3score {display:none;} </style>";
                 } else {
                     echo $pName3 .": ". $pScore3;
                 }
@@ -81,7 +81,7 @@
                 $pName4 = $p4['pName'];
                 $pScore4 = $p4['pScore'];
                 if($pName4 == '') {
-                    echo "No player";
+                    echo "<style>#p4score {display:none;} </style>";
                 } else {
                     echo $pName4 .": ". $pScore4;
                 }
@@ -93,7 +93,7 @@
                 $pName5 = $p5['pName'];
                 $pScore5 = $p5['pScore'];
                 if($pName5 == '') {
-                    echo "No player";
+                    echo "<style>#p5score {display:none;} </style>";
                 } else {
                     echo $pName5 .": ". $pScore5;
                 }
@@ -105,7 +105,7 @@
                 $pName6 = $p6['pName'];
                 $pScore6 = $p6['pScore'];
                 if($pName6 == '') {
-                    echo "No player";
+                    echo "<style>#p6score {display:none;} </style>";
                 } else {
                     echo $pName6 .": ". $pScore6;
                 }
