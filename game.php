@@ -36,6 +36,19 @@
             <li>If you roll 20 or more, odd numbers will give you a point and even numbers will lose you a point.</li>
             <li>If you roll less than 20, even numbers will give you points odd numbers subtract points.</li>
         </ul>
+        Notes
+        <ul>
+            <li>Players must refresh page to get updated score board.</li>
+        </ul>
+    </div>
+    
+    <div id="dice">
+        <div id="die1" class="die">1</div>
+        <div id="die2" class="die">2</div>
+        <div id="die3" class="die">3</div>
+        <div id="die4" class="die">4</div>
+        <div id="die5" class="die">5</div>
+        <div id="die6" class="die">6</div>
     </div>
     
     <div id="scoreBox">

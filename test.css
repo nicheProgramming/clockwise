@@ -26,6 +26,17 @@ li {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+#dice {
+    border:1px solid white;
+    position:fixed;
+    display:inline-block;
+    margin-top:45px;
+    width:70px;
+    height:420px;
+    top:450px;
+    right:0px;
+    padding:4px;
+}
 #rules {
     border:1px solid white;
     position:fixed;
@@ -40,6 +51,15 @@ li {
     left:0;
     position:fixed;
     margin:10px;
+}
+.die{
+    height:50px;
+    width:50px;
+    margin:10px;
+    float:right;
+    background-color:blue;
+    text-align:center;
+    font-size:40px;
 }
 .pScore {
     width:100px;

@@ -2,10 +2,10 @@ Ordered most to least needed.
 Commented entries are NOT TO BE WORKED ON until uncommented entries are COMPLETE and FUNCTIONAL.
 
 
+Set up Ajax.
+Use Ajax to push game instance info to all connected clients.
 Would it be better to export game info to a txt file?
-Use to set up game deletion: http://stackoverflow.com/questions/1589278/sql-deleting-tables-with-prefix .
 Learn how to stop a database from accepting more then x many entries max.
-Tell php to set each pScore box's value = their score.
 Add dice blocks and total dice score to game.php
 Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
