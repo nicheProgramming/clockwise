@@ -63,27 +63,51 @@
         </div>
         <div id="p3score" class="pScore">
             <?php
-            //     $p3score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-            //     // echo $p3score;
-            // ?>
+                $p3 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 3"));
+                $pName3 = $p3['pName'];
+                $pScore3 = $p3['pScore'];
+                if($pName3 == '') {
+                    echo "No player";
+                } else {
+                    echo $pName3 .": ". $pScore3;
+                }
+            ?>
         </div>
         <div id="p4score" class="pScore">
             <?php
-            //     $p4score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-            //     // echo $p4score;
-            // ?>
+                $p4 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 4"));
+                $pName4 = $p4['pName'];
+                $pScore4 = $p4['pScore'];
+                if($pName4 == '') {
+                    echo "No player";
+                } else {
+                    echo $pName4 .": ". $pScore4;
+                }
+            ?>
         </div>
         <div id="p5score" class="pScore">
             <?php
-            //     $p5score = mysqli_query($con, "SELECT player1score FROM testGame WHERE player1score > 0;");
-            //     echo $p5score;
-            // ?>
+                $p5 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 5"));
+                $pName5 = $p5['pName'];
+                $pScore5 = $p5['pScore'];
+                if($pName5 == '') {
+                    echo "No player";
+                } else {
+                    echo $pName5 .": ". $pScore5;
+                }
+            ?>
         </div>
         <div id="p6score" class="pScore">
             <?php
-            //     $p6score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-            //     //echo $p6score;
-            // ?>
+                $p6 = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `testGame` WHERE `pNum` = 6"));
+                $pName6 = $p6['pName'];
+                $pScore6 = $p6['pScore'];
+                if($pName6 == '') {
+                    echo "No player";
+                } else {
+                    echo $pName6 .": ". $pScore6;
+                }
+            ?>
         </div>
     </div>
 </body>

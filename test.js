@@ -38,6 +38,10 @@ function reloadF(div){
     container.innerHTML= content;
 }
 
+function hide(element) {
+    document.getElementById(element).style.display = 'none';
+}
+
 function hidePlayer() {
     //Should run a for loop to check each player's score. 
     //If it's 0 or below, hide the score box. 

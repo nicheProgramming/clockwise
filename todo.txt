@@ -14,8 +14,7 @@ Determine if individual elements can be refreshed on a certain basis.
 //Fix up [if not exists] parameter. 
 Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
-    Set up score keeping serverside. 
-    Make bot players.
+//Make bot players.
 //Shorten URLS for share function.
 //Add preferences page.
 //Enforce actual emails/make sure they at least ACTUALLY have a domain.
@@ -25,5 +24,5 @@ Build game functions in php.
 //Make a bug reporting feature.
 //Rework game destroy to send game over files to another folder temporarily, in case the game needs to be revived. The folder should be cleared once a day.
 Use to set up game deletion: http://stackoverflow.com/questions/1589278/sql-deleting-tables-with-prefix .
-Figure out how to keep sql data in ONE ROW.
 Learn how to stop a database from accepting more then x many entries max.
+Make absent player's score boxes dissapear.
