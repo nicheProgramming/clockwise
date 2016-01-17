@@ -3,6 +3,8 @@ Commented entries are NOT TO BE WORKED ON until uncommented entries are COMPLETE
 
 
 //Set overlay box(es) to inline-flex and get Inline flex working.
+Would it be better to export game info to a txt file?
+//Set user log in sessions to expire after 12-24 hours.
 Tell php to set each pScore box's value = their score.
 Tell JS to check those values to decide if a pScore box should be displayed.
 Add dice blocks and total dice score to game.php
@@ -23,3 +25,4 @@ Build game functions in php.
 //Make a bug reporting feature.
 //Rework game destroy to send game over files to another folder temporarily, in case the game needs to be revived. The folder should be cleared once a day.
 Use to set up game deletion: http://stackoverflow.com/questions/1589278/sql-deleting-tables-with-prefix .
+Figure out how to keep sql data in ONE ROW.

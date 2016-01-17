@@ -24,6 +24,7 @@
     /*makeTable();
     array_push($usersInGame, $_SESSION['userName']); 
     echo implode(',', $usersInGame);*/ 
+    
     ?>
     <div id="rules">
         Clockwise is a game of chance.
@@ -47,39 +48,43 @@
                 //} else {
                 //  echo "<script>hidePlayer(player1);</script>";
                 //}
-                $p1score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                // echo $p1score;
+                $p1name = mysqli_fetch_array(mysqli_query($con, "SELECT p1name FROM testGame"));
+                $sha = mysqli_query($con, "SELECT p1score FROM testGame");
+                $p1score = mysqli_fetch_assoc($sha);
+                //I believe p1score is broken due to the row issue.
+                $p1score += 1;
+                echo $p1name[0] . ": " . $p1score['p1name'];
             ?>
         </div>
         <div id="p2score" class="pScore">
             <?php
-                $p2score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                // echo $p2score;
-            ?>
+            //     $p2score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+            //     // echo $p2score;
+            // ?>
         </div>
         <div id="p3score" class="pScore">
             <?php
-                $p3score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                // echo $p3score;
-            ?>
+            //     $p3score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+            //     // echo $p3score;
+            // ?>
         </div>
         <div id="p4score" class="pScore">
             <?php
-                $p4score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                // echo $p4score;
-            ?>
+            //     $p4score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+            //     // echo $p4score;
+            // ?>
         </div>
         <div id="p5score" class="pScore">
             <?php
-                $p5score = mysqli_query($con, "SELECT player1score FROM testGame WHERE player1score > 0;");
-                echo $p5score;
-            ?>
+            //     $p5score = mysqli_query($con, "SELECT player1score FROM testGame WHERE player1score > 0;");
+            //     echo $p5score;
+            // ?>
         </div>
         <div id="p6score" class="pScore">
             <?php
-                $p6score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
-                //echo $p6score;
-            ?>
+            //     $p6score = mysqli_query($con, "SELECT * FROM testGame WHERE player1score > 0");
+            //     //echo $p6score;
+            // ?>
         </div>
     </div>
 </body>
