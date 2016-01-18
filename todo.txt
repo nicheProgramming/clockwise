@@ -1,6 +1,7 @@
 Ordered most to least needed. 
 Commented entries are NOT TO BE WORKED ON until uncommented entries are COMPLETE and FUNCTIONAL.
 
+We will likely have to rewrite the diddapearing score cards in AJAX.
 
 Set up Ajax.
 Use Ajax to push game instance info to all connected clients.

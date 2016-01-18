@@ -7,10 +7,9 @@
         $con = $GLOBALS['con'];
     ?>
     <link rel="stylesheet" type="text/css" href="test.css">
-    <script src="test.js">
-        // var runner = setInterval(reloadF('scoreBox'),1000);
-        // runner;
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="test.js"></script>
+    <title>Clockwise</title>
 </head>
 
 <body>
