@@ -10,6 +10,7 @@ Learn how to stop a database from accepting more then x many entries max.
 Add dice blocks and total dice score to game.php
 Build game functions in php.
     Have functions run when player joins that adds their name to a database w all players
+If the project continues, use some of these ideas: http://stackoverflow.com/questions/13237330/developing-a-multiplayer-browser-based-card-game-with-html-js-ajax-java .
 //set html elements displaying vars to inline-flex.
 //Fix login check errors.
 //Fix up [if not exists] parameter. 

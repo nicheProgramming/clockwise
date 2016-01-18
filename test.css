@@ -2,6 +2,9 @@ html {
     background-color:#595959;
     color:white;
 }
+button {
+    margin:2px;
+}
 li {
     margin-left:-20px;
 }
@@ -30,11 +33,9 @@ li {
     border:1px solid white;
     position:fixed;
     display:inline-block;
-    margin-top:45px;
-    width:70px;
-    height:420px;
-    top:450px;
-    right:0px;
+    width:140px;
+    top:6%;
+    left:35%;
     padding:4px;
 }
 #rules {
@@ -52,11 +53,37 @@ li {
     position:fixed;
     margin:10px;
 }
+#total {
+    background-color:green;
+}
+#toolbox {
+    border:1px solid white;
+    display:inline-flex;
+    position:fixed;
+    bottom:100px;
+    padding:4px;
+    margin:2px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#turn {
+    border:1px solid white;
+    position:fixed;
+    display:inline-block;
+    margin-top:445px;
+    width:250px;
+    right:0;
+    padding:4px;
+}
 .die{
     height:50px;
     width:50px;
     margin:10px;
-    float:right;
+    float:left;
     background-color:blue;
     text-align:center;
     font-size:40px;

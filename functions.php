@@ -75,7 +75,7 @@
         $fh = fopen($fName,'w');
         fwrite($fh, $gameContents);
         fclose($fh);
-        header("Location: ". $fName);
+        //header("Location: ". $fName);
     }
     
     //Destroys generated files after game session is over. 
@@ -84,6 +84,8 @@
         $table = $GLOBALS['usedUniq'];
         $dropTable = mysqli_query($con, "DROP TABLE " . $table . ";");
         $deleteFile = unlink($table . '.php');
+        $dropTable;
+        $deleteFile;
         header("Location: main.php");
     }
     
