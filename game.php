@@ -40,19 +40,21 @@
         </ul>
         <!--Notes-->
         <!--<ul>-->
-        <!--    <li>Players must refresh page to get updated score board.</li>-->-
+        <!--    <li>Players must refresh page to get updated score board.</li>-->
         <!--</ul>-->
     </div>
     
     <div id="turn">It's player 1's turn.</div>
     
+    <div id="log"></div>
+    
     <div id="toolbox">
         <button onClick="roll()">Roll Dice</button>
-        <button onClick="endTurn()">End Turn</button>
-        <button onClick="populateBoard()">Pop</button>
+        <!--<button onClick="endTurn()">End Turn</button>-->
     </div>
     
     <div id="dice">
+        Last Roll<br>
         <div id="die1" class="die">1</div>
         <div id="die2" class="die">2</div>
         <div id="die3" class="die">3</div>

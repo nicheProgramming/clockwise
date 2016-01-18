@@ -37,6 +37,7 @@ li {
     top:6%;
     left:35%;
     padding:4px;
+    text-align:center;
 }
 #rules {
     border:1px solid white;
@@ -75,6 +76,15 @@ li {
     position:fixed;
     display:inline-block;
     margin-top:445px;
+    width:250px;
+    right:0;
+    padding:4px;
+} 
+#log {
+    border:1px solid white;
+    position:fixed;
+    display:inline-flex;
+    margin-top:475px;
     width:250px;
     right:0;
     padding:4px;
